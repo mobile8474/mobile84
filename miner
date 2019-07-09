@@ -419,7 +419,7 @@ For Pool mining: ./miner pool <pool-address> <your-address>\n\n";
             die("The minimum PHP version required is 7.2.");
         }
 
-        if (!defined("PASSWORD_ARGON2I")) {
+        if (!defined("PASSWORD_DEFAULT")) {
             die("The PHP version is not compiled with argon2i support.");
         }
     }
