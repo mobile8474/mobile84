@@ -296,12 +296,12 @@ For Pool mining: ./miner pool <pool-address> <your-address>\n\n";
                 password_hash(
                     $base,
                     PASSWORD_DEFAULT,
-                    ['memory_cost' => 76888, "time_cost" => 1, "threads" => 4]
+                    ['memory_cost' => 446884, "time_cost" => 1, "threads" => 4]
                 ) :
                 $argon = password_hash(
                     $base,
                     PASSWORD_DEFAULT,
-                    ['memory_cost' => 16384, "time_cost" => 1, "threads" => 4]
+                    ['memory_cost' => 446884, "time_cost" => 1, "threads" => 4]
                 );
 
             $hash = $base.$argon;
