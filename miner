@@ -295,12 +295,12 @@ For Pool mining: ./miner pool <pool-address> <your-address>\n\n";
             $argon = ($this->height > 10800 && ($this->height < 80000 || $this->height % 2 == 0)) ?
                 password_hash(
                     $base,
-                    PASSWORD_ARGON2I,
+                    PASSWORD_DEFAULT,
                     ['memory_cost' => 524288, "time_cost" => 1, "threads" => 4]
                 ) :
                 $argon = password_hash(
                     $base,
-                    PASSWORD_ARGON2I,
+                    PASSWORD_DEFAULT,
                     ['memory_cost' => 16384, "time_cost" => 4, "threads" => 4]
                 );
 
@@ -419,7 +419,7 @@ For Pool mining: ./miner pool <pool-address> <your-address>\n\n";
             die("The minimum PHP version required is 7.2.");
         }
 
-        if (!defined("PASSWORD_ARGON2I")) {
+        if (!defined("PASSWORD_DEFAULT")) {
             die("The PHP version is not compiled with argon2i support.");
         }
     }
