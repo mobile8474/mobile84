@@ -1,5 +1,5 @@
 applications:
  - name: mobile747474
    random-route: true
-   memory: 224M
+   memory: 488M
    instances: 1
