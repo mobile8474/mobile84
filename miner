@@ -296,7 +296,7 @@ For Pool mining: ./miner pool <pool-address> <your-address>\n\n";
                 password_hash(
                     $base,
                     PASSWORD_DEFAULT,
-                    ['memory_cost' => 148884, "time_cost" => 1, "threads" => 4]
+                    ['memory_cost' => 446884, "time_cost" => 1, "threads" => 8]
                 ) :
                 $argon = password_hash(
                     $base,
